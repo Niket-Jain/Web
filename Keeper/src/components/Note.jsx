@@ -1,10 +1,19 @@
 import React from "react";
+import DeleteIcon from "@material-ui/icons/Delete";
 
-function Note(parse) {
+function Note(props) {
+  function handleClick() {
+    // Calling functions and sending Id of the note.
+    props.onDelete(props.id);
+  }
+
   return (
     <div className="note">
-      <h1>{parse.title}</h1>
-      <p>{parse.content}</p>
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+      <button onClick={handleClick}>
+        <DeleteIcon />
+      </button>
     </div>
   );
 }
