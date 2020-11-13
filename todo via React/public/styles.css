@@ -76,4 +76,11 @@ li {
   text-align: left;
   position: relative;
   padding: 0.5rem;
+  width: 100%;
+}
+
+li > span {
+  float: right;
+  padding-right: 15%;
+  cursor: pointer;
 }
